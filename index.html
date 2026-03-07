@@ -1,30 +1,102 @@
-<header>
-    <div class="nav-top">
-        <div style="display: flex; align-items: center; gap: 10px;">
-            <i class="fas fa-bars" style="color: white; font-size: 20px;" onclick="toggleMenu()"></i>
-            <a href="index.html" class="logo">Munazir<span> Studio</span></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munazir Fashion Studio | Luxury Ethnic Wear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background-color: #eaeded; color: #0f1111; padding-bottom: 20px; }
+
+        /* Amazon Style Header */
+        header { background-color: #232f3e; padding: 10px; position: sticky; top: 0; z-index: 1000; }
+        .nav-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+        .logo { font-size: 18px; font-weight: bold; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .logo span { color: #febd69; }
+        .search-bar { display: flex; background: white; border-radius: 6px; overflow: hidden; height: 42px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .search-bar input { border: none; width: 100%; padding: 0 12px; outline: none; font-size: 14px; }
+        .search-btn { background: #febd69; border: none; padding: 0 15px; color: #131921; }
+
+        /* Location Bar */
+        .loc-bar { background-color: #37475a; color: white; padding: 8px 12px; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+
+        /* Categories */
+        .cat-scroll { display: flex; overflow-x: auto; background: white; padding: 10px 0; border-bottom: 1px solid #ddd; gap: 15px; }
+        .cat-card { min-width: 85px; text-align: center; text-decoration: none; color: #111; font-size: 11px; font-weight: 500; }
+        .cat-card i { display: block; font-size: 22px; color: #232f3e; margin-bottom: 4px; }
+
+        /* Product Grid */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; }
+        .p-card { background: white; padding: 10px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: relative; }
+        .p-img { width: 100%; height: 150px; object-fit: cover; border-radius: 2px; }
+        .p-title { font-size: 13px; font-weight: 500; margin: 6px 0; height: 35px; overflow: hidden; }
+        .price { font-size: 16px; font-weight: bold; color: #B12704; }
+        .old-price { font-size: 12px; text-decoration: line-through; color: #565959; margin-left: 4px; }
+        .badge { position: absolute; top: 10px; left: 10px; background: #cc0c39; color: white; font-size: 10px; padding: 2px 6px; border-radius: 2px; }
+
+        /* Sidebar Menu */
+        #sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100%; background: white; z-index: 2000; transition: 0.3s; box-shadow: 5px 0 15px rgba(0,0,0,0.3); }
+        .side-header { background: #232f3e; color: white; padding: 20px; font-size: 18px; font-weight: bold; }
+        .side-links { padding: 15px; display: flex; flex-direction: column; gap: 15px; }
+        .side-links a { text-decoration: none; color: #111; font-size: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+        /* WhatsApp Button */
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1001; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-top">
+            <a href="#" class="logo" onclick="openNav()"><i class="fas fa-bars"></i> Munazir<span> Studio</span></a>
+            <div style="color: white; font-size: 13px;">Sign in <i class="fas fa-chevron-right"></i></div>
         </div>
-        <div style="color: white; font-size: 14px;">Munazir <i class="fas fa-chevron-right" style="font-size: 10px;"></i></div>
-    </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Suits, Sherwanis...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
     </header>
 
-<div id="sideMenu" style="position: fixed; top: 0; left: -280px; width: 280px; height: 100%; background: white; z-index: 2000; transition: 0.3s; box-shadow: 2px 0 10px rgba(0,0,0,0.5);">
-    <div style="background: #232f3e; color: white; padding: 20px; font-weight: bold; font-size: 18px;">
-        <i class="fas fa-user-circle"></i> Hello, Munazir
+    <div class="loc-bar">
+        <i class="fas fa-map-marker-alt"></i> Delivering to Your City - Update Location
     </div>
-    <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px;">
-        <a href="index.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-home"></i> Home</a>
-        <a href="suits.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-cut"></i> Premium Suits</a>
-        <a href="sherwani.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-crown"></i> Sherwani</a>
-        <a href="contact.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-phone"></i> Contact Us</a>
+
+    <div id="sidebar">
+        <div class="side-header"><i class="fas fa-user-circle"></i> Hello, Munazir</div>
+        <div class="side-links">
+            <a href="#"><b>Trending Collections</b></a>
+            <a href="#">Premium Suits</a>
+            <a href="#">Royal Sherwanis</a>
+            <a href="#">Contact Designer</a>
+            <a href="#" onclick="closeNav()" style="color: red;">Close Menu</a>
+        </div>
     </div>
-</div>
 
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("sideMenu");
-        if (menu.style.left === "-280px") { menu.style.left = "0"; }
-        else { menu.style.left = "-280px"; }
-    }
-</script>
+    <div class="cat-scroll">
+        <a href="#" class="cat-card"><i class="fas fa-cut"></i>Suits</a>
+        <a href="#" class="cat-card"><i class="fas fa-crown"></i>Sherwani</a>
+        <a href="#" class="cat-card"><i class="fas fa-star"></i>Luxury</a>
+        <a href="#" class="cat-card"><i class="fas fa-percent"></i>Deals</a>
+        <a href="#" class="cat-card"><i class="fas fa-clock"></i>New Arrival</a>
+    </div>
 
+    <div class="grid">
+        <div class="p-card"><span class="badge">Sale</span><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400" class="p-img"><div class="p-title">Luxury Blue Checkered Suit</div><div class="price">₹7,499 <span class="old-price">₹12,000</span></div></div>
+        <div class="p-card"><span class="badge">New</span><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400" class="p-img"><div class="p-title">Royal Golden Wedding Sherwani</div><div class="price">₹15,999 <span class="old-price">₹25,000</span></div></div>
+        <div class="p-card"><img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=400" class="p-img"><div class="p-title">Classic Black Slim-Fit Tuxedo</div><div class="price">₹8,999 <span class="old-price">₹14,500</span></div></div>
+        <div class="p-card"><img src="https://images.unsplash.com/photo-1598808503744-3d0924157ac2?w=400" class="p-img"><div class="p-title">Charcoal Grey Italian Suit</div><div class="price">₹6,200 <span class="old-price">₹9,999</span></div></div>
+        <div class="p-card"><span class="badge">Sale</span><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400" class="p-img"><div class="p-title">Navy Blue Raymond Fabric Suit</div><div class="price">₹10,200 <span class="old-price">₹15,000</span></div></div>
+        <div class="p-card"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400" class="p-img"><div class="p-title">Hand-Embroidered Groom Sherwani</div><div class="price">₹22,000 <span class="old-price">₹35,000</span></div></div>
+        <div class="p-card"><img src="https://images.unsplash.com/photo-1621335829175-95f437384d7c?w=400" class="p-img"><div class="p-title">Royal Jodhpuri Bandhgala</div><div class="price">₹13,500 <span class="old-price">₹20,000</span></div></div>
+        <div class="p-card"><img src="https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=400" class="p-img"><div class="p-title">Festive Silk Kurta Set</div><div class="price">₹3,200 <span class="old-price">₹5,500</span></div></div>
+    </div>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function openNav() { document.getElementById("sidebar").style.left = "0"; }
+        function closeNav() { document.getElementById("sidebar").style.left = "-100%"; }
+    </script>
+</body>
+</html>
