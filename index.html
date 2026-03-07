@@ -3,59 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitaabGhar.in | Premium Luxury Wear</title>
+    <title>KitaabGhar.in | Premium Luxury Shopping</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #e3e6e6; color: #0f1111; padding-bottom: 50px; }
-        header { background-color: #131921; padding: 12px; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 22px; font-weight: bold; color: white; text-decoration: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: #f1f3f6; color: #212121; }
+
+        /* Amazon Style Header */
+        header { background-color: #232f3e; padding: 10px; position: sticky; top: 0; z-index: 1000; }
+        .nav-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+        .logo { font-size: 18px; font-weight: bold; color: white; text-decoration: none; }
         .logo span { color: #febd69; }
-        .hero { background: url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800') center/cover; height: 220px; }
-        .container { padding: 15px; margin-top: -40px; }
-        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
-        h2 { border-bottom: 2px solid #febd69; display: inline-block; padding-bottom: 5px; margin-bottom: 20px; font-size: 20px; }
-        .step { margin-bottom: 25px; }
-        .step-num { background: #febd69; color: #131921; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 10px; }
-        .btn-wa { background: #25D366; color: white; padding: 12px; border-radius: 25px; text-decoration: none; display: block; font-weight: bold; margin-top: 20px; }
+        
+        /* Search Bar (Flipkart/Amazon style) */
+        .search-container { display: flex; background: white; border-radius: 4px; overflow: hidden; height: 40px; }
+        .search-container input { border: none; width: 100%; padding: 10px; outline: none; font-size: 14px; }
+        .search-btn { background: #febd69; border: none; padding: 0 15px; cursor: pointer; color: #232f3e; }
+
+        /* Category Icons */
+        .categories { display: flex; overflow-x: auto; background: white; padding: 10px 0; border-bottom: 1px solid #ddd; }
+        .cat-item { min-width: 80px; text-align: center; font-size: 11px; font-weight: 500; }
+        .cat-item i { display: block; font-size: 20px; color: #2874f0; margin-bottom: 5px; }
+
+        /* Hero Banner */
+        .hero { width: 100%; height: 180px; background: url('https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800') center/cover; margin-bottom: 10px; }
+
+        /* Product Grid */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; }
+        .p-card { background: white; padding: 10px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .p-img { width: 100%; height: 140px; object-fit: cover; margin-bottom: 8px; border-radius: 2px; }
+        .p-title { font-size: 13px; font-weight: 400; height: 35px; overflow: hidden; margin-bottom: 5px; }
+        .p-price { font-size: 16px; font-weight: bold; color: #388e3c; }
+        
+        /* Floating WhatsApp Button */
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; }
     </style>
 </head>
 <body>
+
     <header>
-        <a href="#" class="logo">KitaabGhar<span>.in</span></a>
-        <div style="color: white; font-size: 13px;">Munazir's Account</div>
+        <div class="nav-top">
+            <a href="#" class="logo">KitaabGhar<span>.in</span></a>
+            <div style="color: white; font-size: 13px;"><i class="fas fa-user"></i> Munazir</div>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for Suits, Sherwani, Tools...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
     </header>
+
+    <div class="categories">
+        <div class="cat-item"><i class="fas fa-cut"></i>Suits</div>
+        <div class="cat-item"><i class="fas fa-crown"></i>Sherwani</div>
+        <div class="cat-item"><i class="fas fa-user-secret"></i>Hacking</div>
+        <div class="cat-item"><i class="fas fa-blog"></i>Blogging</div>
+        <div class="cat-item"><i class="fas fa-percent"></i>Offers</div>
+    </div>
 
     <div class="hero"></div>
 
-    <main class="container">
-        <div class="card">
-            <h2>Order Kaise Karein?</h2>
-            
-            <div class="step">
-                <div class="step-num">1</div>
-                <p><strong>Selection</strong><br>Premium suit ya hacking tool chunein.</p>
-            </div>
-
-            <div class="step">
-                <div class="step-num">2</div>
-                <div style="font-size: 24px; color: #25D366; margin-bottom: 5px;"><i class="fab fa-whatsapp"></i></div>
-                <p><strong>Contact</strong><br>Hamein WhatsApp par message karein.</p>
-            </div>
-
-            <div class="step">
-                <div class="step-num">3</div>
-                <p><strong>Customizing</strong><br>Aapke naap ke hisaab se stitching.</p>
-            </div>
-
-            <div class="step">
-                <div class="step-num">4</div>
-                <p><strong>Delivery</strong><br>Order aapke ghar tak pahunchega.</p>
-            </div>
-
-            <a href="https://wa.me/your-number" class="btn-wa">Order on WhatsApp</a>
+    <div class="grid">
+        <div class="p-card">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400" class="p-img">
+            <div class="p-title">Premium Luxury Blue Checkered Suit</div>
+            <div class="p-price">Custom Order</div>
         </div>
-    </main>
+        <div class="p-card">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400" class="p-img">
+            <div class="p-title">Designer Royal Wedding Sherwani</div>
+            <div class="p-price">Best Deal</div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
 </body>
 </html>
 
