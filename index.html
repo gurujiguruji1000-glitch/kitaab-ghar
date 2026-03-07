@@ -7,53 +7,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #e3e6e6; color: #0f1111; }
-        header { background-color: #131921; padding: 10px; position: sticky; top: 0; z-index: 1000; }
-        .nav-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        .logo { font-size: 20px; font-weight: bold; color: white; text-decoration: none; }
+        body { background-color: #e3e6e6; color: #0f1111; padding-bottom: 50px; }
+        header { background-color: #131921; padding: 12px; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: bold; color: white; text-decoration: none; }
         .logo span { color: #febd69; }
-        .hero { 
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), #e3e6e6), url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800');
-            height: 250px; /* Mobile ke liye height kam kar di */
-            background-size: cover; background-position: center; 
-        }
-        .container { padding: 15px; margin-top: -50px; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .step-box { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; background: #f8f8f8; padding: 10px; border-radius: 5px; }
-        .step-num { background: #131921; color: #febd69; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
-        .btn-amazon { background: #ffd814; border: 1px solid #fcd200; border-radius: 20px; padding: 10px; width: 100%; cursor: pointer; font-weight: 600; text-align: center; text-decoration: none; display: block; color: black; }
+        .hero { background: url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800') center/cover; height: 220px; }
+        .container { padding: 15px; margin-top: -40px; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        h2 { border-bottom: 2px solid #febd69; display: inline-block; padding-bottom: 5px; margin-bottom: 20px; font-size: 20px; }
+        .step { margin-bottom: 25px; }
+        .step-num { background: #febd69; color: #131921; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 10px; }
+        .btn-wa { background: #25D366; color: white; padding: 12px; border-radius: 25px; text-decoration: none; display: block; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
     <header>
-        <div class="nav-top">
-            <a href="#" class="logo">KitaabGhar<span>.in</span></a>
-            <div style="color: white; font-size: 12px;">Hello, Munazir</div>
-        </div>
+        <a href="#" class="logo">KitaabGhar<span>.in</span></a>
+        <div style="color: white; font-size: 13px;">Munazir's Account</div>
     </header>
 
     <div class="hero"></div>
 
     <main class="container">
         <div class="card">
-            <h2 style="margin-bottom: 15px; border-bottom: 2px solid #febd69; padding-bottom: 5px;">Order Kaise Karein?</h2>
-            <div class="step-box">
+            <h2>Order Kaise Karein?</h2>
+            
+            <div class="step">
                 <div class="step-num">1</div>
-                <div><strong>Design Select Karein:</strong> Hamare luxury collection se chunein.</div>
+                <p><strong>Selection</strong><br>Premium suit ya hacking tool chunein.</p>
             </div>
-            <div class="step-box">
+
+            <div class="step">
                 <div class="step-num">2</div>
-                <div><strong>Measurement Dein:</strong> WhatsApp par details share karein.</div>
+                <div style="font-size: 24px; color: #25D366; margin-bottom: 5px;"><i class="fab fa-whatsapp"></i></div>
+                <p><strong>Contact</strong><br>Hamein WhatsApp par message karein.</p>
             </div>
-            <div class="step-box">
+
+            <div class="step">
                 <div class="step-num">3</div>
-                <div><strong>Pro Hacking Tips:</strong> Blog se security updates lein.</div>
+                <p><strong>Customizing</strong><br>Aapke naap ke hisaab se stitching.</p>
             </div>
-            <div class="step-box">
+
+            <div class="step">
                 <div class="step-num">4</div>
-                <div><strong>Delivery:</strong> Apna order ghar baithe payein.</div>
+                <p><strong>Delivery</strong><br>Order aapke ghar tak pahunchega.</p>
             </div>
-            <a href="#" class="btn-amazon">WhatsApp Bookings</a>
+
+            <a href="https://wa.me/your-number" class="btn-wa">Order on WhatsApp</a>
         </div>
     </main>
 </body>
