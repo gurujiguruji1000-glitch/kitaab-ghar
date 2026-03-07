@@ -3,80 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitaabGhar.in | Premium Luxury Shopping</title>
+    <title>Munazir Fashion Studio | Luxury Ethnic Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background-color: #f1f3f6; color: #212121; }
-
-        /* Amazon Style Header */
-        header { background-color: #232f3e; padding: 10px; position: sticky; top: 0; z-index: 1000; }
-        .nav-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-        .logo { font-size: 18px; font-weight: bold; color: white; text-decoration: none; }
+        
+        /* Premium Header */
+        header { background-color: #131921; padding: 12px; position: sticky; top: 0; z-index: 1000; }
+        .nav-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .logo { font-size: 20px; font-weight: bold; color: white; text-decoration: none; }
         .logo span { color: #febd69; }
         
-        /* Search Bar (Flipkart/Amazon style) */
-        .search-container { display: flex; background: white; border-radius: 4px; overflow: hidden; height: 40px; }
-        .search-container input { border: none; width: 100%; padding: 10px; outline: none; font-size: 14px; }
-        .search-btn { background: #febd69; border: none; padding: 0 15px; cursor: pointer; color: #232f3e; }
+        .search-box { display: flex; background: white; border-radius: 4px; overflow: hidden; }
+        .search-box input { border: none; width: 100%; padding: 10px; outline: none; }
+        .search-btn { background: #febd69; border: none; padding: 0 15px; }
 
-        /* Category Icons */
-        .categories { display: flex; overflow-x: auto; background: white; padding: 10px 0; border-bottom: 1px solid #ddd; }
-        .cat-item { min-width: 80px; text-align: center; font-size: 11px; font-weight: 500; }
-        .cat-item i { display: block; font-size: 20px; color: #2874f0; margin-bottom: 5px; }
+        /* Navigation Categories */
+        .categories { display: flex; justify-content: space-around; background: white; padding: 12px 0; border-bottom: 1px solid #ddd; }
+        .cat-item { text-align: center; font-size: 12px; font-weight: 500; color: #131921; text-decoration: none; }
+        .cat-item i { display: block; font-size: 22px; color: #2874f0; margin-bottom: 4px; }
 
-        /* Hero Banner */
-        .hero { width: 100%; height: 180px; background: url('https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800') center/cover; margin-bottom: 10px; }
+        /* Main Content */
+        .hero { width: 100%; height: 200px; background: url('https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800') center/cover; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
+        .product-card { background: white; padding: 10px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .product-img { width: 100%; height: 160px; object-fit: cover; border-radius: 2px; }
+        .product-title { font-size: 13px; margin: 8px 0; height: 36px; overflow: hidden; }
+        .price { color: #388e3c; font-weight: bold; font-size: 15px; }
 
-        /* Product Grid */
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px; }
-        .p-card { background: white; padding: 10px; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .p-img { width: 100%; height: 140px; object-fit: cover; margin-bottom: 8px; border-radius: 2px; }
-        .p-title { font-size: 13px; font-weight: 400; height: 35px; overflow: hidden; margin-bottom: 5px; }
-        .p-price { font-size: 16px; font-weight: bold; color: #388e3c; }
-        
-        /* Floating WhatsApp Button */
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000; }
+        /* WhatsApp Float */
+        .wa-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="nav-top">
-            <a href="#" class="logo">KitaabGhar<span>.in</span></a>
-            <div style="color: white; font-size: 13px;"><i class="fas fa-user"></i> Munazir</div>
+            <a href="#" class="logo">Munazir<span> Studio</span></a>
+            <div style="color: white; font-size: 14px;"><i class="fas fa-user"></i> Profile</div>
         </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search for Suits, Sherwani, Tools...">
+        <div class="search-box">
+            <input type="text" placeholder="Search for Suits, Sherwanis...">
             <button class="search-btn"><i class="fas fa-search"></i></button>
         </div>
     </header>
 
     <div class="categories">
-        <div class="cat-item"><i class="fas fa-cut"></i>Suits</div>
-        <div class="cat-item"><i class="fas fa-crown"></i>Sherwani</div>
-        <div class="cat-item"><i class="fas fa-user-secret"></i>Hacking</div>
-        <div class="cat-item"><i class="fas fa-blog"></i>Blogging</div>
-        <div class="cat-item"><i class="fas fa-percent"></i>Offers</div>
+        <a href="#" class="cat-item"><i class="fas fa-cut"></i>Premium Suits</a>
+        <a href="#" class="cat-item"><i class="fas fa-crown"></i>Royal Sherwani</a>
+        <a href="#" class="cat-item"><i class="fas fa-medal"></i>Special Offers</a>
     </div>
 
     <div class="hero"></div>
 
     <div class="grid">
-        <div class="p-card">
-            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400" class="p-img">
-            <div class="p-title">Premium Luxury Blue Checkered Suit</div>
-            <div class="p-price">Custom Order</div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400" class="product-img">
+            <div class="product-title">Luxury Blue Checkered 3-Piece Suit</div>
+            <div class="price">Custom Order</div>
         </div>
-        <div class="p-card">
-            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400" class="p-img">
-            <div class="p-title">Designer Royal Wedding Sherwani</div>
-            <div class="p-price">Best Deal</div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400" class="product-img">
+            <div class="product-title">Designer Royal Wedding Sherwani</div>
+            <div class="price">Exclusive Deal</div>
         </div>
     </div>
 
-    <a href="https://wa.me/91XXXXXXXXXX" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/your-number" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
-
