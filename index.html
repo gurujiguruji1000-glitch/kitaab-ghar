@@ -1,99 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munazir Studio | Amazon Look</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background-color: #eaeded; color: #0f1111; }
-
-        /* Amazon Dark Header */
-        header { background-color: #232f3e; padding: 10px; position: sticky; top: 0; z-index: 1000; }
-        .nav-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 5px; }
-        .logo { font-size: 18px; font-weight: bold; color: white; text-decoration: none; }
-        .logo span { color: #febd69; }
-        
-        /* Amazon Search Bar */
-        .search-container { display: flex; background: white; border-radius: 6px; overflow: hidden; height: 45px; margin-top: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        .search-container input { border: none; width: 100%; padding: 0 12px; outline: none; font-size: 15px; }
-        .search-btn { background: #febd69; border: none; padding: 0 15px; color: #131921; font-size: 18px; }
-
-        /* Amazon Delivery Blue Bar */
-        .delivery-bar { background-color: #37475a; color: white; padding: 8px 12px; font-size: 13px; display: flex; align-items: center; gap: 8px; }
-        
-        /* Category Icons Section */
-        .scrolling-wrapper { display: flex; overflow-x: auto; background: white; padding: 10px 0; border-bottom: 1px solid #ddd; scrollbar-width: none; }
-        .scrolling-wrapper::-webkit-scrollbar { display: none; }
-        .category-item { min-width: 90px; text-align: center; font-size: 12px; font-weight: 500; }
-        .category-item i { display: block; font-size: 24px; color: #232f3e; margin-bottom: 4px; }
-
-        /* Amazon Style Banner Card */
-        .hero-banner { background: #fff; margin: 10px; padding: 15px; border-radius: 4px; }
-        .hero-banner h2 { font-size: 18px; margin-bottom: 10px; }
-        .hero-img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
-        .hero-link { color: #007185; text-decoration: none; font-size: 14px; display: block; margin-top: 10px; }
-
-        /* 2-Column Product Grid */
-        .amazon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
-        .product-card { background: white; padding: 10px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .p-image { width: 100%; height: 150px; object-fit: cover; margin-bottom: 10px; }
-        .p-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; height: 38px; overflow: hidden; }
-        .p-price { font-size: 17px; font-weight: bold; }
-        .p-price span { font-size: 12px; color: #565959; font-weight: normal; text-decoration: line-through; margin-left: 5px; }
-
-        /* Floating WhatsApp Button */
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); text-decoration: none; z-index: 1001; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="nav-top">
-            <a href="#" class="logo">Munazir<span> Studio</span></a>
-            <div style="color: white; font-size: 14px;"><i class="fas fa-user"></i> Sign in ></div>
+<header>
+    <div class="nav-top">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fas fa-bars" style="color: white; font-size: 20px;" onclick="toggleMenu()"></i>
+            <a href="index.html" class="logo">Munazir<span> Studio</span></a>
         </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search Amazon.in">
-            <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
+        <div style="color: white; font-size: 14px;">Munazir <i class="fas fa-chevron-right" style="font-size: 10px;"></i></div>
+    </div>
     </header>
 
-    <div class="delivery-bar">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Delivering to Ahmedabad 380001 - Update location</span>
+<div id="sideMenu" style="position: fixed; top: 0; left: -280px; width: 280px; height: 100%; background: white; z-index: 2000; transition: 0.3s; box-shadow: 2px 0 10px rgba(0,0,0,0.5);">
+    <div style="background: #232f3e; color: white; padding: 20px; font-weight: bold; font-size: 18px;">
+        <i class="fas fa-user-circle"></i> Hello, Munazir
     </div>
-
-    <div class="scrolling-wrapper">
-        <div class="category-item"><i class="fas fa-cut"></i>Suits</div>
-        <div class="category-item"><i class="fas fa-crown"></i>Sherwani</div>
-        <div class="category-item"><i class="fas fa-percent"></i>Deals</div>
-        <div class="category-item"><i class="fas fa-tshirt"></i>Kurta</div>
-        <div class="category-item"><i class="fas fa-star"></i>Luxury</div>
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px;">
+        <a href="index.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-home"></i> Home</a>
+        <a href="suits.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-cut"></i> Premium Suits</a>
+        <a href="sherwani.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-crown"></i> Sherwani</a>
+        <a href="contact.html" style="text-decoration: none; color: #111; font-weight: 500;"><i class="fas fa-phone"></i> Contact Us</a>
     </div>
+</div>
 
-    <div class="hero-banner">
-        <h2>Under ₹999 | Wedding Season Sale</h2>
-        <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800" class="hero-img">
-        <a href="#" class="hero-link">See all offers</a>
-    </div>
-
-    <div class="amazon-grid">
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400" class="p-image">
-            <div class="p-title">Premium Luxury Blue Suit</div>
-            <div class="p-price">₹Best <span>₹Exclusive</span></div>
-        </div>
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=400" class="p-image">
-            <div class="p-title">Designer Royal Sherwani</div>
-            <div class="p-price">₹Sale <span>₹Deal</span></div>
-        </div>
-    </div>
-
-    <a href="https://wa.me/91XXXXXXXXXX" class="wa-float"><i class="fab fa-whatsapp"></i></a>
-
-</body>
-</html>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("sideMenu");
+        if (menu.style.left === "-280px") { menu.style.left = "0"; }
+        else { menu.style.left = "-280px"; }
+    }
+</script>
 
