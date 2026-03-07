@@ -5,256 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KitaabGhar.in | Premium Luxury Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <style>
-        /* --- AMAZON STYLE PROFESSIONAL CSS --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background-color: #e3e6e6; color: #0f1111; }
-
-        /* Header & Nav */
-        header { background-color: #131921; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; }
-        .nav-top { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 25px; font-weight: bold; color: white; text-decoration: none; }
+        header { background-color: #131921; padding: 10px; position: sticky; top: 0; z-index: 1000; }
+        .nav-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .logo { font-size: 20px; font-weight: bold; color: white; text-decoration: none; }
         .logo span { color: #febd69; }
-        
-        .search-bar { flex: 1; display: flex; margin: 0 20px; height: 40px; }
-        .search-bar input { width: 100%; border: none; padding: 10px; border-radius: 4px 0 0 4px; outline: none; }
-        .search-btn { background-color: #febd69; border: none; width: 45px; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 18px; }
-
-        .nav-links { display: flex; gap: 20px; color: white; font-size: 14px; }
-        .nav-links a { color: white; text-decoration: none; }
-
-        /* Sidebar Menu */
-        .sub-nav { background-color: #232f3e; padding: 8px 20px; color: white; display: flex; gap: 15px; font-size: 14px; align-items: center; }
-        .menu-icon { font-size: 18px; cursor: pointer; font-weight: bold; }
-
-        /* Hero Banner */
         .hero { 
-            background: linear-gradient(to bottom, rgba(0,0,0,0), #e3e6e6), url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=1600');
-            height: 450px; background-size: cover; background-position: center; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), #e3e6e6), url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800');
+            height: 250px; /* Mobile ke liye height kam kar di */
+            background-size: cover; background-position: center; 
         }
-
-        /* Product Grid */
-        .container { padding: 20px; margin-top: -180px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .card h2 { font-size: 19px; margin-bottom: 12px; height: 50px; }
-        .card-img { width: 100%; height: 200px; background-size: cover; background-position: top; border-radius: 4px; margin-bottom: 10px; }
-        .price { font-size: 22px; font-weight: bold; margin: 10px 0; }
-        
-        /* Buttons */
-        .btn-amazon { background: #ffd814; border: 1px solid #fcd200; border-radius: 20px; padding: 10px; width: 100%; cursor: pointer; font-weight: 600; text-align: center; text-decoration: none; display: inline-block; color: black; margin-top: 10px; }
-        .btn-amazon:hover { background: #f7ca00; }
-
-        /* Footer */
-        footer { background-color: #232f3e; color: white; padding: 40px 20px; margin-top: 50px; text-align: center; }
-        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
-        .footer-links a { color: #ddd; text-decoration: none; font-size: 14px; }
-        .social-icons { font-size: 24px; margin: 20px 0; display: flex; justify-content: center; gap: 20px; }
-        .social-icons a { color: #febd69; }
+        .container { padding: 15px; margin-top: -50px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .step-box { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; background: #f8f8f8; padding: 10px; border-radius: 5px; }
+        .step-num { background: #131921; color: #febd69; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .btn-amazon { background: #ffd814; border: 1px solid #fcd200; border-radius: 20px; padding: 10px; width: 100%; cursor: pointer; font-weight: 600; text-align: center; text-decoration: none; display: block; color: black; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-top">
             <a href="#" class="logo">KitaabGhar<span>.in</span></a>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for luxury suits, sherwanis, or hacking tips...">
-                <button class="search-btn"><i class="fa fa-search"></i></button>
-            </div>
-            <div class="nav-links">
-                <a href="#">Hello, Munazir<br><strong>Account</strong></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i> <strong>Cart</strong></a>
-            </div>
+            <div style="color: white; font-size: 12px;">Hello, Munazir</div>
         </div>
     </header>
 
-    <div class="sub-nav">
-        <span class="menu-icon"><i class="fas fa-bars"></i> All</span>
-        <span>Premium Suits</span>
-        <span>Sherwani</span>
-        <span>Ethical Hacking Tools</span>
-        <span>Blogging Tips</span>
-    </div>
-
     <div class="hero"></div>
 
-    <main class="container"><section style="background: white; padding: 20px; margin: 20px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-    <h2 style="font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid #febd69; display: inline-block;">Order Kaise Karein?</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-        
-        <div style="text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-            <div style="background: #131921; color: #febd69; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px; font-weight: bold; font-size: 20px;">1</div>
-            <h3 style="font-size: 16px;">Design Select Karein</h3>
-            <p style="font-size: 13px; color: #555;">Hamare premium collection se apna pasandida suit chunein.</p>
-        </div>
-
-        <div style="text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-            <div style="background: #131921; color: #febd69; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px; font-weight: bold; font-size: 20px;">2</div>
-            <h3 style="font-size: 16px;">Appointment Book Karein</h3>
-            <p style="font-size: 13px; color: #555;">Button par click karke WhatsApp par message karein.</p>
-        </div>
-
-        <div style="text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-            <div style="background: #131921; color: #febd69; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px; font-weight: bold; font-size: 20px;">3</div>
-            <h3 style="font-size: 16px;">Measurement Dein</h3>
-            <p style="font-size: 13px; color: #555;">Hum aapka perfect naap (measurement) lekar stitching shuru karenge.</p>
-        </div>
-
-        <div style="text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-            <div style="background: #131921; color: #febd69; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; margin: 0 auto 10px; font-weight: bold; font-size: 20px;">4</div>
-            <h3 style="font-size: 16px;">Delivery Payein</h3>
-            <p style="font-size: 13px; color: #555;">Aapka luxury suit taiyar hone par aap tak pahuncha diya jayega.</p>
-        </div>
-
-    </div<section style="background: white; padding: 25px; margin: 20px 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-    <h2 style="text-align: center; color: #131921; margin-bottom: 25px; font-size: 22px;">Pro Guide: KitaabGhar Se Kaise Judein</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px;">
-        
-        <div style="text-align: center;">
-            <div style="color: #febd69; font-size: 30px; margin-bottom: 10px;"><i class="fas fa-cut"></i></div>
-            <div style="background: #131921; color: white; width: 25px; height: 25px; line-height: 25px; border-radius: 50%; margin: 0 auto 10px;">1</div>
-            <h4 style="font-size: 15px;">Style Chunein</h4>
-            <p style="font-size: 12px; color: #666;">Party suits ya Sherwani design select karein.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="color: #febd69; font-size: 30px; margin-bottom: 10px;"><i class="fas fa-user-secret"></i></div>
-            <div style="background: #131921; color: white; width: 25px; height: 25px; line-height: 25px; border-radius: 50%; margin: 0 auto 10px;">2</div>
-            <h4 style="font-size: 15px;">Security Tips</h4>
-            <p style="font-size: 12px; color: #666;">Hamare blog se daily hacking updates lein.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="color: #febd69; font-size: 30px; margin-bottom: 10px;"><i class="fab fa-whatsapp"></i></div>
-            <div style="background: #131921; color: white; width: 25px; height: 25px; line-height: 25px; border-radius: 50%; margin: 0 auto 10px;">3</div>
-            <h4 style="font-size: 15px;">Hamein Batayein</h4>
-            <p style="font-size: 12px; color: #666;">WhatsApp par measurement aur details bhejein.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="color: #febd69; font-size: 30px; margin-bottom: 10px;"><i class="fas fa-truck-fast"></i></div>
-            <div style="background: #131921; color: white; width: 25px; height: 25px; line-height: 25px; border-radius: 50%; margin: 0 auto 10px;">4</div>
-            <h4 style="font-size: 15px;">Perfect Fit</h4>
-            <p style="font-size: 12px; color: #666;">Apna custom-made suit home delivery payein.</p>
-        </div>
-
-    </div>
-</section>
-</section>
-
-        
+    <main class="container">
         <div class="card">
-            <h2>Premium Luxury Party Suit</h2>
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&q=80&w=400');"></div>
-            <p class="price">Custom Stitching</p>
-            <a href="#" class="btn-amazon">Book Appointment</a>
+            <h2 style="margin-bottom: 15px; border-bottom: 2px solid #febd69; padding-bottom: 5px;">Order Kaise Karein?</h2>
+            <div class="step-box">
+                <div class="step-num">1</div>
+                <div><strong>Design Select Karein:</strong> Hamare luxury collection se chunein.</div>
+            </div>
+            <div class="step-box">
+                <div class="step-num">2</div>
+                <div><strong>Measurement Dein:</strong> WhatsApp par details share karein.</div>
+            </div>
+            <div class="step-box">
+                <div class="step-num">3</div>
+                <div><strong>Pro Hacking Tips:</strong> Blog se security updates lein.</div>
+            </div>
+            <div class="step-box">
+                <div class="step-num">4</div>
+                <div><strong>Delivery:</strong> Apna order ghar baithe payein.</div>
+            </div>
+            <a href="#" class="btn-amazon">WhatsApp Bookings</a>
         </div>
-
-        <div class="card">
-            <h2>FilmiWorld - Blogging Tips</h2>
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=400');"></div>
-            <p>Master Affiliate Marketing</p>
-            <a href="https://filmiworldin.blogspot.com" target="_blank" class="btn-amazon">Visit Blog</a>
-        </div>
-
-        <div class="card">
-            <h2>Cybersecurity & Termux Tools</h2>
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400');"></div>
-            <p>Python & Nmap Scripts</p>
-            <a href="https://github.com/gurujiguruji1000-glitch" target="_blank" class="btn-amazon">Check GitHub</a>
-        </div>
-
-        <div class="card">
-            <h2>Digital Influencer Kit</h2>
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=400');"></div>
-            <p>Join the Community</p>
-            <a href="#" class="btn-amazon">Follow Me</a>
-        </div>
-
     </main>
-<div style="background: white; margin: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <h2 style="font-size: 20px; margin-bottom: 15px; color: #131921; border-bottom: 2px solid #febd69; display: inline-block;">How It Works</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
-        
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">1</div>
-            <h3 style="font-size: 16px;">Selection</h3>
-            <p style="font-size: 13px; color: #555;">Choose your luxury style or hacking tool.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">2</div>
-            <h3 style="font-size: 16px;">Contact</h3>
-            <p style="font-size: 13px; color: #555;">Message us for custom stitching or queries.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">3</div>
-            <h3 style="font-size: 16px;">Customizing</h3>
-            <p style="font-size: 13px; color: #555;">We tailor the suit to your perfect fit.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">4</div>
-            <h3 style="font-size: 16px;">Delivery</h3>
-            <p style="font-size: 13px; color: #555;">Get your order delivered to your door.</p>
-        </div>
-
-    </div>
-</div>
-<div style="background: white; margin: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <h2 style="font-size: 20px; margin-bottom: 15px; color: #131921; border-bottom: 2px solid #febd69; display: inline-block;">How It Works</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 15px;">
-        
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">1</div>
-            <h3 style="font-size: 16px;">Selection</h3>
-            <p style="font-size: 13px; color: #555;">Choose your luxury style or hacking tool.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">2</div>
-            <h3 style="font-size: 16px;">Contact</h3>
-            <p style="font-size: 13px; color: #555;">Message us for custom stitching or queries.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">3</div>
-            <h3 style="font-size: 16px;">Customizing</h3>
-            <p style="font-size: 13px; color: #555;">We tailor the suit to your perfect fit.</p>
-        </div>
-
-        <div style="text-align: center;">
-            <div style="background: #febd69; width: 35px; height: 35px; border-radius: 50%; line-height: 35px; margin: 0 auto 10px; font-weight: bold;">4</div>
-            <h3 style="font-size: 16px;">Delivery</h3>
-            <p style="font-size: 13px; color: #555;">Get your order delivered to your door.</p>
-        </div>
-
-    </div>
-</div>
-
-    <footer>
-        <div class="footer-links">
-            <a href="https://github.com/gurujiguruji1000-glitch">GitHub Profile</a>
-            <a href="https://filmiworldin.blogspot.com">Blogger</a>
-            <a href="#">About KitaabGhar</a>
-            <a href="#">Contact Support</a>
-        </div>
-        
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="https://github.com/gurujiguruji1000-glitch"><i class="fab fa-github"></i></a>
-        </div>
-        
-        <p>&copy; 2026 KitaabGhar.in - Designed for Professionals</p>
-    </footer>
-
 </body>
 </html>
+
